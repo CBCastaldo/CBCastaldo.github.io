@@ -5,7 +5,7 @@
 // Step 1: Declare a new variable to hold information about yourself
 let profile = {
     name: 'Chelsea Castaldo',
-    photo: 'Profile_Picture_Resized.jpg',
+    photo: 'images/Profile_Picture_Resized.jpg',
     favoriteFoods: ['Crumble Apple Pie', 'Medium Rare Steak', 'Bacon', 'Brooker\'s Founding Flavors Ice Cream'],
     hobbies: ['Cross Stitch', 'Gardening', 'Genealogy', 'Video Games'],
     placesLived: []
@@ -23,24 +23,24 @@ let profile = {
 // Step 7: Inside of the empty array above, add a new object with two properties: place and length and values of an empty string
 profile.placesLived = [
     {
-place: 'Hyrum, Utah',
-length: '4 years'
+        place: 'Hyrum, Utah',
+        length: '4 years'
     },
     {
-place: 'Rancho Cordova, California',
-length: '14 years'
+        place: 'Rancho Cordova, California',
+        length: '14 years'
     },
     {
-place: 'Rexburg, Idaho',
-length: '5 years'
+        place: 'Rexburg, Idaho',
+        length: '5 years'
     },
     {
-place: 'West Jordan, Utah',
-length: '4 months'
+        place: 'West Jordan, Utah',
+        length: '4 months'
     },
     {
-place: 'Orem, Utah',
-length: '9 years'
+        place: 'Orem, Utah',
+        length: '9 years'
     }
 ];
 
@@ -69,10 +69,17 @@ fullName.textContent = profile.name;
 photo.setAttribute('src', profile.photo);
 photo.setAttribute('alt', `Profile picture of ${profile.name}`);
 
-profile.favoriteFoods.forEach(food => {
-    let li = document.createElement('li');
-    li.textContent = food;
-    favoriteFoodsList.appendChild(li)
+profile.favoriteFoods.forEach((food) => {
+    let favoriteFoodElem = document.createElement('li');
+    favoriteFoodElem.textContent = food;
+    favoriteFoodsList.appendChild(favoriteFoodElem)
+
+});
+
+profile.hobbies.forEach((hobby) => {
+    let hobbyElem = document.createElement('li');
+    hobbyElem.textContent = hobby;
+    hobbiesList.appendChild(hobbyElem)
 
 });
 
@@ -84,18 +91,29 @@ profile.favoriteFoods.forEach(food => {
 // - Create an HTML <dt> element and put its place property in the <dt> element
 // - Create an HTML <dd> element and put its length property in the <dd> element
 
-profile.placesLived.forEach(location => {
-    let tr = document.createElement('tr');
-    let tdPlace = document.createElement('td');
-    let tdLength = document.createElement('td');
+// profile.placesLived.forEach((location) => {
+//     let tr = document.createElement('tr');
+//     let tdPlace = document.createElement('td');
+//     let tdLength = document.createElement('td');
 
-    tdPlace.textContent = location.place;
-    tdLength.textContent = location.length;
+//     tdPlace.textContent = location.place;
+//     tdLength.textContent = location.length;
 
-    tr.appendChild(tdPlace);
-    tr.appendChild(tdLength);
+//     tr.appendChild(tdPlace);
+//     tr.appendChild(tdLength);
     
-    table.appendChild(tr)
-});
+//     table.appendChild(tr)
+// });
 
+profile.placesLived.forEach((placeLived) => {
+    let placesLivedPlace = document.createElement('dt');
+    placesLivedPlace.textContent = placeLived.place;
+    
+    let placesLivedLength = document.createElement('dd');
+    placesLivedLength.textContent = placeLived.length;
+    
+    // Step 9: Append the HTML <dt> and <dd> elements created above to the HTML <dl> element with an ID of places-lived
+    document.querySelector('#places-lived').appendChild(placesLivedPlace);
+    document.querySelector('#places-lived').appendChild(placesLivedLength);
+})
 // Step 9: Append the HTML <dt> and <dd> elements created above to the HTML <dl> element with an ID of places-lived
