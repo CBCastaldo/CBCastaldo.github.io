@@ -5,7 +5,7 @@
 // Step 1: Declare a new variable to hold information about yourself
 let profile = {
     name: 'Chelsea Castaldo',
-    photo: 'Profile Picture Resized.jpg',
+    photo: 'Profile_Picture_Resized.jpg',
     favoriteFoods: ['Crumble Apple Pie', 'Medium Rare Steak', 'Bacon', 'Brooker\'s Founding Flavors Ice Cream'],
     hobbies: ['Cross Stitch', 'Gardening', 'Genealogy', 'Video Games'],
     placesLived: []
@@ -84,18 +84,18 @@ profile.favoriteFoods.forEach(food => {
 // - Create an HTML <dt> element and put its place property in the <dt> element
 // - Create an HTML <dd> element and put its length property in the <dd> element
 
-profile.placesLived.forEach(place => {
+profile.placesLived.forEach(location => {
     let tr = document.createElement('tr');
     let tdPlace = document.createElement('td');
     let tdLength = document.createElement('td');
 
-    tdPlace.textContent = place.place;
-    tdLength.textContent = place.length;
+    tdPlace.textContent = location.place;
+    tdLength.textContent = location.length;
 
     tr.appendChild(tdPlace);
     tr.appendChild(tdLength);
     
-    table.appendChild(tr);
+    table.appendChild(tr)
 });
 
 // Step 9: Append the HTML <dt> and <dd> elements created above to the HTML <dl> element with an ID of places-lived
