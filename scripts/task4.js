@@ -6,8 +6,8 @@
 let profile = {
     name: 'Chelsea Castaldo',
     photo: 'Profile Picture Resized.jpg',
-    favoriteFoods: [],
-    hobbies: [],
+    favoriteFoods: ['Crumble Apple Pie', 'Medium Rare Steak', 'Bacon', 'Brooker\'s Founding Flavors Ice Cream'],
+    hobbies: ['Cross Stitch', 'Gardening', 'Genealogy', 'Video Games'],
     placesLived: []
 };
 // Step 2: Inside of the object, add a property named name with a value of your name as a string
