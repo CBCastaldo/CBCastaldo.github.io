@@ -19,7 +19,7 @@ function addNumbers() {
 // Step 4: Assign the return value to an HTML form element with an ID of sum
 
 // Step 5: Add a "click" event listener to the HTML button with an ID of addNumbers that calls the addNumbers function
-document.querySelector('#addnumbers').addEventListener('click', addNumbers);
+document.querySelector('#addNumbers').addEventListener('click', addNumbers);
 
 // Step 6: Using function expressions, repeat Steps 1-5 with new functions named subtract and subtractNumbers and HTML form controls with IDs of minuend, subtrahend, difference and subtractNumbers
 const subtract = function(number1, number2) {
