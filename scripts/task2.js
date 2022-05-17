@@ -15,7 +15,7 @@ const currentYear = new Date().getFullYear();
 document.querySelector('#year').innerHTML = currentYear;
 
 // Step 5: declare and instantiate a variable to hold the name of your picture
-const profileImage = 'images/Profile Picture Resized.jpg';
+const profileImage = 'images/Profile_Picture_Resized.jpg';
 const profileAlt = "Chelsea Castaldo, sitting with her arms crossed."
 
 // Step 6: copy your image into the "images" folder
