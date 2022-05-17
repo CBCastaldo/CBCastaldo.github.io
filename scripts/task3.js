@@ -36,7 +36,7 @@ const subtractNumbers = function() {
 document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
 
 // Step 7: Using arrow functions, repeat Steps 1-5 with new functions named multiply and mulitplyNumbers and HTML form controls with IDs of factor1, factor2, product and multiplyNumbers
-const multiply = (number1, number2) => {number1 * number2};
+const multiply = (number1, number2) => number1 * number2;
 
 const multiplyNumbers = () => {
     let factor1 = parseFloat(document.querySelector('#factor1').value);
@@ -50,7 +50,7 @@ document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNum
 
 // Step 8: Using any of the three function declaration types, repeat Steps 1-5 with new functions named divide and divideNumbers and HTML form controls with IDs of dividend, divisor, quotient and divideNumbers
 const divide = function(dividend, divisor) {
-    return dividend % divisor;
+    return dividend / divisor;
 }
 
 const divideNumbers = function() {
