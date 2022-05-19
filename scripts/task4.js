@@ -62,8 +62,12 @@ profile.placesLived = [
 // Step 5: Append the <li> elements created above as children of the HTML <ul> element with an ID of favorite-foods
 const fullName = document.querySelector('#name');
 const photo = document.querySelector('#photo');
-const favoriteFoodsList = document.querySelector('#favoriteFoods');
+const favoriteFoodsList = document.querySelector('#favorite-foods');
 const hobbiesList = document.querySelector('#hobbies');
+const placesLived = document.querySelector('#places-lived');
+console.log(favoriteFoodsList)
+console.log(hobbiesList)
+console.log(placesLived)
 
 fullName.textContent = profile.name;
 photo.setAttribute('src', profile.photo);
@@ -72,6 +76,7 @@ photo.setAttribute('alt', `Profile picture of ${profile.name}`);
 profile.favoriteFoods.forEach((food) => {
     let favoriteFoods = document.createElement('li');
     favoriteFoods.textContent = food;
+
     favoriteFoodsList.appendChild(favoriteFoods)
 
 });
