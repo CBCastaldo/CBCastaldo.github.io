@@ -70,9 +70,9 @@ photo.setAttribute('src', profile.photo);
 photo.setAttribute('alt', `Profile picture of ${profile.name}`);
 
 profile.favoriteFoods.forEach((food) => {
-    let favoriteFoodElem = document.createElement('li');
-    favoriteFoodElem.textContent = food;
-    favoriteFoodsList.appendChild(favoriteFoodElem)
+    let favoriteFoods = document.createElement('li');
+    favoriteFoods.textContent = food;
+    favoriteFoodsList.appendChild(favoriteFoods)
 
 });
 
