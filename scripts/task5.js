@@ -133,7 +133,7 @@ async function getTemples(url) {
     }
 };
 
-getTemples();
+getTemples(url);
 // Step 8: Declare a function named sortBy that does the following:
 // - Calls the reset function
 // - Sorts the global temple list by the currently selected value of the HTML element with an ID of sortBy
