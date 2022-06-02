@@ -93,6 +93,45 @@ async function getTemples(url) {
 
 getTemples(url);
 
+const reset = () => {
+    document.querySelector('#temples').innerHTML = '';
+}
+const sortBy = () => {
+    reset();
+
+    let filter = document.querySelector('#sortBy').value;
+
+    switch (filter) {
+        case 'templeNameAscending':
+            output(templeList.sort(
+                (temple1, temple2) => {
+                    let templeName1 = temple1.templeName.toLowerCase();
+                    let templeName2 = temple2.templeName.toLowerCase();
+                    if (templeName1 < templeName2) return -1;
+                    else if (templeName1 > templeName2) return 1;
+                    else return 0;
+                }));
+            break;
+        case 'templeNameDescending':
+            output(templeList.sort(
+                (temple1, temple2) => {
+                    let templeName1 = temple1.templeName.toLowerCase();
+                    let templeName2 = temple2.templeName.toLowerCase();
+                    if (templeName1 > templeName2) return -1;
+                    else if (templeName1 < templeName2) return 1;
+                    else return 0;
+                }));
+            break;
+        default:
+            // using ternary operators
+            output(templeList.sort(
+                (temple1, temple2) => 
+                temple1.templeName.toLowerCase() > temple2.templeName.toLowerCase() ? 1 : 
+                    temple2.templeName.toLowerCase() > temple1.templeName.toLowerCase() ? -1 : 0));
+            break;
+    }
+}
+
 const output = (temples) => {
     temples.forEach(
         temple => {
@@ -121,6 +160,7 @@ const output = (temples) => {
     );
 }
 
+document.querySelector('#sortBy').addEventListener('change', sortBy);
 
 // Step 3: Create another function called getTemples. Make it an async function.
 // Step 4: In the function, using the built-in fetch method, call this absolute URL: 'https://byui-cse.github.io/cse121b-course/week05/temples.json'. Create a variable to hold the response from your fetch. You should have the program wait on this line until it finishes.
@@ -139,47 +179,6 @@ const output = (temples) => {
 // - Calls the reset function
 // - Sorts the global temple list by the currently selected value of the HTML element with an ID of sortBy
 // - Calls the output function passing in the sorted list of temples
-const reset = () => {
-    document.querySelector('#temples').innerHTML = '';
-}
-
-
-// Step 9: Add a change event listener to the HTML element with an ID of sortBy that calls the sortBy function
-const sortBy = () => {
-    reset();
-
-    let filter = document.querySelector('#sortby').value;
-
-    switch (filter) {
-        case 'asc':
-            output(templeList.sort(
-                (temple1, temple2) => {
-                    let templeName1 = temple1.templeName.toLowerCase();
-                    let templeName2 = temple2.templeName.toLowerCase();
-                    if (templeName1 < templeName2) return -1;
-                    else if (templeName1 > templeName2) return 1;
-                    else return 0;
-                }));
-            break;
-        case 'des':
-            output(templeList.sort(
-                (temple1, temple2) => {
-                    let templeName1 = temple1.templeName.toLowerCase();
-                    let templeName2 = temple2.templeName.toLowerCase();
-                    if (templeName1 > templeName2) return -1;
-                    else if (templeName1 < templeName2) return 1;
-                    else return 0;
-                }));
-            break;
-        default:
-            // using ternary operators
-            output(templeList.sort(
-                (temple1, temple2) => 
-                temple1.templeName.toLowerCase() > temple2.templeName.toLowerCase() ? 1 : 
-                    temple2.templeName.toLowerCase() > temple1.templeName.toLowerCase() ? -1 : 0));
-            break;
-    }
-}
 
 // // Step 10: Add a change event listener to the HTML element with an ID of sortBy that calls the sortBy function
 // document.querySelector('#sortBy').addEventListener('change', sortBy);
