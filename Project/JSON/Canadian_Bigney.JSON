@@ -1,0 +1,52 @@
+[
+    {
+        "personName": "George Oliver Bigney",
+        "birthDate": "1899-08-19",
+        "birthPlace": "Truro, Colchester, Nova Scotia, Canada",
+        "deathDate": "1948-02-17",
+        "deathPlace": "Redondo Beach, Los Angeles, California, United States",
+        "imageUrl": ""
+    },
+    {
+        "personName": "Henry Oliver Bigney",
+        "birthDate": "1873-01-19",
+        "birthPlace": "Great Village, Colchester, Nova Scotia, Canada",
+        "deathDate": "1937-08-07",
+        "deathPlace": "Springhill, Cumberland, Nova Scotia, Canada",
+        "imageUrl": ""
+    },
+    {
+        "personName": "Susan Adalaide Bigney",
+        "birthDate": "1900-12-08",
+        "birthPlace": "Truro, Colchester, Nova Scotia, Canada",
+        "deathDate": "2000-01-18",
+        "deathPlace": "Palmetto, Manatee, Florida, United States",
+        "imageUrl": ""
+    },
+    {
+        "personName": "Winona Pearl Bigney",
+        "birthDate": "1905-08-25",
+        "birthPlace": "East Mines, Colchester, Nova Scotia, Canada",
+        "deathDate": "1987-10-06",
+        "deathPlace": "Sturgis, St. Joseph, Michigan, United States",
+        "imageUrl": ""
+    },
+    {
+        "personName": "Harry Lawrence Bigney",
+        "birthDate": "1906-07-23",
+        "birthPlace": "Truro, Colchester, Nova Scotia, Canada",
+        "deathDate": "1961-04-27",
+        "deathPlace": "Riverside, Riverside, California, United States",
+        "imageUrl": ""
+    },
+    {
+        "personName": "Walter Lyman Kenneth Bigney",
+        "birthDate": "1909-09-22",
+        "birthPlace": "Amherst, Cumberland, Nova Scotia, Canada",
+        "deathDate": "1986-07-02",
+        "deathPlace": "Linton, Greene, Indiana, United States",
+        "imageUrl": ""
+    }
+
+
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "personName": "Hannah Bigney",
+        "birthDate": "",
+        "birthPlace": "",
+        "deathDate": "1826-11-12",
+        "deathPlace": "Swanton, Abbot, Norfolk, England, United Kingdom",
+        "imageUrl": ""
+    },
+    {
+        "personName": "Thomas Bigney",
+        "birthDate": "1680-01-16",
+        "birthPlace": "Honing, Norfolk, England",
+        "deathDate": "05/22/1681",
+        "deathPlace": "Honing, Norfolk, England",
+        "imageUrl": ""
+    },
+    {
+        "personName": "Robert Bigney",
+        "birthDate": "",
+        "birthPlace": "",
+        "deathDate": "1828-01-20",
+        "deathPlace": "Gillingham, Norfolk, England, United Kingdom",
+        "imageUrl": ""
+    }
+]

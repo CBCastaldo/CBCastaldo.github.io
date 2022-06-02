@@ -1,0 +1,26 @@
+[
+    {
+        "personName": "André Bigney",
+        "birthDate": "1826-04-16",
+        "birthPlace": "Lugon-et-L'Ile-du-Carney, France",
+        "deathDate": "",
+        "deathPlace": "",
+        "imageUrl": ""
+    },
+    {
+        "personName": "Antoine Bigney",
+        "birthDate": "1844-01-29",
+        "birthPlace": "Bouscat, France",
+        "deathDate": "",
+        "deathPlace": "",
+        "imageUrl": ""
+    },
+    {
+        "personName": "Jean Bigney",
+        "birthDate": "",
+        "birthPlace": "",
+        "deathDate": "1812-05-03",
+        "deathPlace": "Bayonne, Basses-Pyrénées, Aquitaine, France",
+        "imageUrl": ""
+    }
+]
