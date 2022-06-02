@@ -36,7 +36,7 @@ switch (dayOfWeek) {
 let theDay = `${theDate.getMonth()}/${theDate.getDate()}`;
 
 if (dayOfWeek === 0 || dayOfWeek === 6 || theDay === '11/25') {
-    message1 = `Overtime`;
+    message1 = `Unavailable to Meet`;
 } else {
     message1 = `Today is ${dayOfWeekString}`;
 }
@@ -154,7 +154,8 @@ const sortBy = () => {
                 (temple1, temple2) => {
                     let templeName1 = temple1.template.toLowerCase();
                     let templeName2 = temple2.templeName.toLowerCase();
-                    if (templeName1 < templeName2) return 1;
+                    if (templeName1 < templeName2) return -1;
+                    else if (templeName1 > templeName2) return 1;
                     else return 0;
                 }));
             break;
@@ -178,8 +179,8 @@ const sortBy = () => {
     }
 }
 
-// Step 10: Add a change event listener to the HTML element with an ID of sortBy that calls the sortBy function
-document.querySelector('#sortBy').addEventListener('change', sortBy);
+// // Step 10: Add a change event listener to the HTML element with an ID of sortBy that calls the sortBy function
+// document.querySelector('#sortBy').addEventListener('change', sortBy);
 
 /* STRETCH */
 
