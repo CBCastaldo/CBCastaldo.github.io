@@ -153,7 +153,7 @@ const sortBy = () => {
         case 'asc':
             output(templeList.sort(
                 (temple1, temple2) => {
-                    let templeName1 = temple1.template.toLowerCase();
+                    let templeName1 = temple1.templeName.toLowerCase();
                     let templeName2 = temple2.templeName.toLowerCase();
                     if (templeName1 < templeName2) return -1;
                     else if (templeName1 > templeName2) return 1;
