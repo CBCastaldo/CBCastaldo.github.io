@@ -80,9 +80,35 @@ let templeList = [];
 // - Creates an HTML <img> element and add the temple's imageUrl property to the src attribute and the temple's templeName property to the alt attribute
 // - Appends the <h3> element, the two <h4> elements, and the <img> element to the <article> element as children
 // - Appends the <article> element to the HTML element with an ID of temples
+const output = (temples) => {
+    temples.forEach(
+        temple => {
+            let article = document.createElement('article');
+
+            let templeName = document.createElement('h3');
+            templeName.textContent = temple.templeName;
+
+            let location = document.createElement('h4');
+            location.textContent = temple.location;
+
+            let dedicated = document.createElement('h4');
+            dedicated.textContent = temple.dedicated;
+
+            let img = document.createElement('img');
+            img.setAttribute('src', temple.imageUrl);
+            img.setAttribute('alt', temple.templeName);
+
+            article.appendChild(templeName);
+            article.appendChild(location);
+            article.appendChild(dedicated);
+            article.appendChild(img);
+
+            document.querySelector('#temples').appendChild(article);
+        }
+    );
+}
 const url = 'https://byui-cse.github.io/cse121b-course/week05/temples.json';
 let results = null;
-
 async function getTemples(url) {
     const response = await fetch(url);
     if (response.ok) {
@@ -90,9 +116,7 @@ async function getTemples(url) {
         output(data);
     }
 };
-
 getTemples(url);
-
 const reset = () => {
     document.querySelector('#temples').innerHTML = '';
 }
@@ -130,35 +154,7 @@ const sortBy = () => {
                     temple2.templeName.toLowerCase() > temple1.templeName.toLowerCase() ? -1 : 0));
             break;
     }
-}
-
-const output = (temples) => {
-    temples.forEach(
-        temple => {
-            let article = document.createElement('article');
-
-            let templeName = document.createElement('h3');
-            templeName.textContent = temple.templeName;
-
-            let location = document.createElement('h4');
-            location.textContent = temple.location;
-
-            let dedicated = document.createElement('h4');
-            dedicated.textContent = temple.dedicated;
-
-            let img = document.createElement('img');
-            img.setAttribute('src', temple.imageUrl);
-            img.setAttribute('alt', temple.templeName);
-
-            article.appendChild(templeName);
-            article.appendChild(location);
-            article.appendChild(dedicated);
-            article.appendChild(img);
-
-            document.querySelector('#temples').appendChild(article);
-        }
-    );
-}
+};
 
 document.querySelector('#sortBy').addEventListener('change', sortBy);
 
