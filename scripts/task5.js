@@ -124,11 +124,12 @@ const output = (temples) => {
 //     });
 const url = 'https://byui-cse.github.io/cse121b-course/week05/temples.json';
 let results = null;
+
 async function getTemples(url) {
     const response = await fetch(url);
     if (response.ok) {
-        const templeList = await response.json();
-        output(templeList);
+        const data = await response.json();
+        output(data);
     }
 };
 
