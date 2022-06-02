@@ -80,6 +80,18 @@ let templeList = [];
 // - Creates an HTML <img> element and add the temple's imageUrl property to the src attribute and the temple's templeName property to the alt attribute
 // - Appends the <h3> element, the two <h4> elements, and the <img> element to the <article> element as children
 // - Appends the <article> element to the HTML element with an ID of temples
+const url = 'https://byui-cse.github.io/cse121b-course/week05/temples.json';
+let results = null;
+
+async function getTemples(url) {
+    const response = await fetch(url);
+    if (response.ok) {
+        const data = await response.json();
+        output(data);
+    }
+};
+
+getTemples(url);
 
 const output = (temples) => {
     temples.forEach(
@@ -122,18 +134,7 @@ const output = (temples) => {
 //         templeList = temples;
 //         output(templeList);
 //     });
-const url = 'https://byui-cse.github.io/cse121b-course/week05/temples.json';
-let results = null;
 
-async function getTemples(url) {
-    const response = await fetch(url);
-    if (response.ok) {
-        const data = await response.json();
-        output(data);
-    }
-};
-
-getTemples(url);
 // Step 8: Declare a function named sortBy that does the following:
 // - Calls the reset function
 // - Sorts the global temple list by the currently selected value of the HTML element with an ID of sortBy
