@@ -87,7 +87,7 @@ const output = (temples) => {
             let article = document.createElement('article');
 
             let templeName = document.createElement('h3');
-            templeName.textContent = temple.templeName
+            templeName.textContent = temple.templeName;
 
             let location = document.createElement('h4');
             location.textContent = temple.location;
